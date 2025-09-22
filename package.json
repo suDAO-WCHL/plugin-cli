@@ -1,0 +1,51 @@
+{
+  "name": "@sudao-wchl/plugin-cli",
+  "version": "0.0.1",
+  "description": "Manage plugin for suDAO",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "sudao": "dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/cli.js",
+    "prepublishOnly": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@sudao-wchl/plugin-core": "file:../plugin-core",
+    "chalk": "^5.3.0",
+    "commander": "^11.1.0",
+    "inquirer": "^9.2.12"
+  },
+  "devDependencies": {
+    "@icp-sdk/core": "^4.0.4",
+    "@types/inquirer": "^9.0.7",
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suDAO-WCHL/plugin-cli.git"
+  },
+  "keywords": [
+    "sudao",
+    "icp",
+    "plugin",
+    "cli"
+  ],
+  "author": "suDAO Developers",
+  "license": "AGPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/suDAO-WCHL/plugin-cli/issues"
+  },
+  "homepage": "https://github.com/suDAO-WCHL/plugin-cli#readme"
+}
